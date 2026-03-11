@@ -7,4 +7,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TaskManagementAppService\TaskManagementAppService.csproj" />
+    <ProjectReference Include="..\TaskManagementModels\TaskManagementModels.csproj" />
+  </ItemGroup>
+
 </Project>
