@@ -9,7 +9,7 @@ namespace ToDoAppManagement
 
     internal class Program
     {  
-        static TaskAppService taskAppService = new TaskAppService();
+        static TasksAppService taskAppService = new TasksAppService();
         
         static void Main(string[] args)
         {
