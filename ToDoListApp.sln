@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagementModels", "Tas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoListApp", "ToDoListApp\ToDoListApp.csproj", "{F3D5526B-40B5-87AE-773D-06BFB93A8B3A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagementDataService", "TaskManagementDataService\TaskManagementDataService.csproj", "{26837C88-B74D-47EB-ADDC-95F117BA0B64}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F3D5526B-40B5-87AE-773D-06BFB93A8B3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3D5526B-40B5-87AE-773D-06BFB93A8B3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3D5526B-40B5-87AE-773D-06BFB93A8B3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26837C88-B74D-47EB-ADDC-95F117BA0B64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26837C88-B74D-47EB-ADDC-95F117BA0B64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26837C88-B74D-47EB-ADDC-95F117BA0B64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26837C88-B74D-47EB-ADDC-95F117BA0B64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
