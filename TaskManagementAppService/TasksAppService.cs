@@ -7,13 +7,11 @@ namespace TaskManagementAppService
 {
     public class TasksAppService
     {
-        private TaskManagementDual dataService;
+        TaskDataService dataService = new TaskDataService(new TaskDBData());
         private List<Tasks> tasks;
 
         public TasksAppService()
         {
-            TaskDBData taskdb = new TaskDBData();
-            dataService = new TaskManagementDual();
             tasks = dataService.GetAll();
         }
 
@@ -28,7 +26,7 @@ namespace TaskManagementAppService
             };
 
             tasks.Add(newTask);
-            dataService.SaveAll(tasks);
+            dataService.Add(newTask);
         }
 
         public List<Tasks> viewTask()
@@ -41,20 +39,21 @@ namespace TaskManagementAppService
         {
             if (i >= 0 && i < tasks.Count)
             {
+                var task = tasks[i];
                 tasks.RemoveAt(i);
-                dataService.SaveAll(tasks);
+                dataService.Delete(task.Id);
             }
         }
 
-        public void editTask(int i, string task, string date, string time, string status)
+        public void editTask(int i, string taskname, string date, string time)
         {
             if (i >= 0 && i < tasks.Count)
             {
-                tasks[i].Task = task;
+                var task = tasks[i];
+                tasks[i].Task = taskname;
                 tasks[i].Date = date;
                 tasks[i].Time = time;
-                tasks[i].Status = status;
-                dataService.SaveAll(tasks);
+                dataService.Update(task.Id, task);
             }
         }
 
@@ -62,9 +61,16 @@ namespace TaskManagementAppService
         {
             if (i >= 0 && i < tasks.Count)
             {
+                var task = tasks[i];
                 tasks[i].Status = status;
-                dataService.SaveAll(tasks);
+                dataService.UpdateStatus(task.Id, status);
             }
+        }
+
+        public void clearAllTasks()
+        {
+            tasks.Clear();
+            dataService.DeleteAll();
         }
     }
 }

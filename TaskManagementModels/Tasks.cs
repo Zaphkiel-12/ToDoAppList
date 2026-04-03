@@ -6,6 +6,7 @@ namespace TaskManagementModels
 {
     public class Tasks
     {
+        public int Id { get; set; }
         public string Task { get; set; }
         public string Date { get; set; }
         public string Time { get; set; }
