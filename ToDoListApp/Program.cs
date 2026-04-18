@@ -150,7 +150,7 @@ namespace ToDoAppManagement
             int choice = AskNumber("[QUESTION] Enter the task number you want to edit: ", 1, tasks.Count);
             int index = choice - 1;
 
-            if (choice >= 0 && choice < tasks.Count)
+            if (index >= 0 && index < tasks.Count)
             {
                 Console.Write("New Task: ");
                 tasks[index].Task = Console.ReadLine();
@@ -178,7 +178,7 @@ namespace ToDoAppManagement
             int choice = AskNumber("[QUESTION] Enter the task number you want to add a status from: ", 1, tasks.Count);
             int index = choice - 1;
 
-            if (choice >= 0 && choice < tasks.Count)
+            if (index >= 0 && index < tasks.Count)
             {
                 Console.WriteLine("=================================");
                 Console.WriteLine("1. Pending");
